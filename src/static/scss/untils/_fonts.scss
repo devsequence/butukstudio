@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-VariableFont_opsz,wght.ttf');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inter Italic';
+    src: url('../fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+$Inter: "Inter", sans-serif ;
+$InterItalic: "Inter Italic", sans-serif ;
+
+
+
+$h1 : 400 68rem/100% $Inter;
+$h2 : 300 46rem/55.5rem $Inter;
+$h3 : 400 32rem/120% $Inter;
+$h4 : 400 22rem/28rem $Inter;
+$h5 : 400 26rem/120% $Inter;
+
+$h1m : 400 48rem/110% $Inter;
+$h2m : 400 30rem/42rem $Inter;
+$h3m : 400 20rem/29rem $Inter;
+$h4m : 400 18rem/140% $Inter;
+$h5m : 400 18rem/126% $Inter;
+
+$button : 500 18rem/24rem $InterItalic;
+$nav : 400 16rem/normal $Inter;
+$body : 400 18rem/140% $Inter;
+$bodyL : 300 20rem/140% $Inter;
+$bodyM : 300 16rem/140% $Inter;
+$bodyS : 300 14rem/20rem $Inter;
+

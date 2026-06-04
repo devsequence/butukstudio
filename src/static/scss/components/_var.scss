@@ -1,0 +1,41 @@
+// genearl
+$white: #fff;
+$black: #000;
+$black-100: #111211;
+$black-200: #060606;
+
+// main
+$default: #151515;
+$default-100: #233646;
+$bg: #F9F9FA;
+$stroke: #D1D5DC;
+$light: #EDEDED;
+$light-100: #E4E0D9;
+$gray: #99A1AF;
+$primary: #FF6900;
+$secondary: #0F0F0F;
+$blue: #364153;
+$blue-100: #6A7282;
+
+$gradient: linear-gradient(90deg, rgba($black-100, 1) 0%, rgba($black, 0) 100%);
+//$gradientMain: linear-gradient(90deg, rgba($primary-hover, 0.0) 0%, rgba($primary, 1) 100%);
+//$boxShadow: 0 0 16px 0 rgba(121, 69, 225, 0.50), 0 0 3px 0 #FFF inset;
+$boxShadow: 5rem 5rem 9rem 0 rgba($default-100, 0.02);
+
+
+$red: #C12716;
+
+// info
+
+$danger: #FE0000;
+$success: #1FA956;
+$info: #26badf;
+$warning: #fbf8db;
+
+// mixins
+
+@mixin linear-gradient($direction, $fromColor, $toColor) {
+  background-color: $fromColor;
+  background-image: linear-gradient($direction, $fromColor, $toColor);
+}
+

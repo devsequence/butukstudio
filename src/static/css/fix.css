@@ -1,0 +1,172 @@
+.header-nav ul li.menu-item-has-children ul li{
+	margin-bottom: 20rem;	
+}
+.header-nav ul li.menu-item-has-children ul{
+	top: 100%;
+}
+.page-numbers.current{background-color: #fcb82e;} 
+.header-lang {text-transform: uppercase;}
+.hero-news__title{
+	display: -webkit-box;
+  -webkit-line-clamp: 1; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.hero-news__text,.blog-item__text{
+	display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.input_st{
+	height: auto;
+	    padding: 19rem 20rem;
+    border: 1rem solid #fcb82e;
+    background: #f9f2e7;
+    color: #231e13;
+    font: 400 20rem / 160% "TV NordEF Regular", sans-serif;
+    width: 100%;
+    outline: 0;
+}
+textarea.input_st {
+    height: 140rem;
+    resize: none;
+	 padding: 19rem 20rem;
+}
+.form-horizontal{
+	margin:0;
+	gap: 16rem;
+}
+.form{
+	width: 100%;
+}
+.form-horizontal > *{
+	margin:0 0 16rem;
+}
+.form-horizontal > .half{
+	width: calc(50% - 8rem);
+}
+.quick-call .btn-primary span{
+	height: auto;
+}
+.quick-call .btn-primary {
+    width: 100%;
+    font-size: 20rem;
+}
+.check-item{
+	
+}
+.check-item__text{
+	    width: calc(100% - 40rem);
+    padding-left: 10rem;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font: 400 20rem / 160% "TV NordEF Regular", sans-serif;
+}
+.check_st:checked + span{
+	    background-color: #fcb82e;
+	width: 24rem;
+  height: 24rem;
+  background-size: 16rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='16' viewBox='0 0 15 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.668976 8.0635L0.418854 7.65671C0.510434 7.80165 0.605886 7.94774 0.668976 8.0635Z' fill='%23231E13'/%3E%3Cpath d='M5.64033 10.5354L5.68684 10.5641L5.70535 10.5755L5.72088 10.585C5.71635 10.5819 5.71102 10.579 5.70535 10.5755C5.69975 10.5719 5.69358 10.5682 5.68684 10.5641C5.6736 10.556 5.65814 10.5466 5.64033 10.5354Z' fill='%23231E13'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.011 13.0853C4.00738 13.0898 4.00446 13.0936 4.00191 13.0969C3.99863 13.1013 3.99598 13.105 3.99327 13.1088L4.00191 13.0969L4.011 13.0853Z' fill='%23231E13'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.39106 13.9648C4.38177 13.9772 4.3728 13.9892 4.36852 13.9952L4.39106 13.9648Z' fill='%23231E13'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.0288327 7.00755C0.0608876 6.95544 0.112183 6.92912 0.160253 6.92109C0.202734 6.9141 0.2441 6.92099 0.277542 6.92959C0.312714 6.9387 0.351262 6.95267 0.390591 6.97069C0.447602 6.99686 0.512856 7.03724 0.590332 7.08724C0.608211 7.09877 0.626742 7.11082 0.645971 7.12333C0.658967 7.13178 0.672283 7.14044 0.685933 7.14928L5.71805 10.4135L5.76044 10.4404C5.76545 10.4434 5.77108 10.4464 5.77676 10.4494C5.78436 10.4535 5.79208 10.4576 5.7986 10.4617C5.80939 10.4685 5.82648 10.4804 5.8424 10.4957C5.8599 10.5127 5.8848 10.5432 5.89328 10.5879C5.90164 10.6322 5.89027 10.6693 5.88056 10.6913C5.8715 10.7118 5.85906 10.7296 5.85088 10.7409C5.84164 10.7537 5.82593 10.774 5.81013 10.7945C5.80176 10.8053 5.79336 10.8162 5.78588 10.826C5.57774 11.0925 5.31567 11.4246 5.04671 11.7654C4.67261 12.2394 4.28517 12.7303 4.011 13.0853C4.00738 13.0898 4.00446 13.0936 4.00191 13.0969C3.99863 13.1013 3.99598 13.105 3.99327 13.1088C3.98984 13.1136 3.98632 13.1184 3.98133 13.125C3.97741 13.13 3.96767 13.1422 3.95589 13.1533C3.94539 13.1631 3.9108 13.1934 3.85697 13.1958C3.79695 13.1983 3.75708 13.1662 3.74251 13.1519C3.72828 13.1379 3.71766 13.1217 3.71425 13.1165C3.71184 13.1128 3.70527 13.1019 3.70294 13.098C3.70079 13.0946 3.69736 13.0899 3.69389 13.0851C3.69107 13.0812 3.68821 13.0773 3.68598 13.0739L0.541795 8.13295C0.506025 8.06734 0.459059 7.99119 0.407233 7.90918C0.389957 7.88184 0.372142 7.85385 0.354021 7.82537C0.33536 7.79606 0.316377 7.76623 0.297325 7.73608C0.207104 7.5933 0.114039 7.44034 0.0585082 7.32079C0.032218 7.2641 0.00477924 7.19615 0.000570127 7.13369C-0.00149545 7.10149 0.000804382 7.05329 0.0288327 7.00755ZM5.72088 10.585L5.70535 10.5755C5.72968 10.5907 5.74338 10.6009 5.74773 10.6119C5.74445 10.6031 5.7369 10.5951 5.72088 10.585Z' fill='%23231E13'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.36852 13.9952L4.39106 13.9648C4.38512 13.9727 4.37306 13.9891 4.36852 13.9952C4.37006 13.9931 4.36596 13.9987 4.36852 13.9952Z' fill='%23231E13'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.39106 13.9648L4.36852 13.9952C4.35782 14.0102 4.32698 14.0535 4.32613 14.1086C4.32539 14.162 4.35365 14.2051 4.36287 14.2192L4.37584 14.2392C4.38232 14.249 4.3883 14.2581 4.3982 14.2745C4.71105 14.7728 5.04236 15.266 5.37184 15.7542C5.40954 15.8095 5.44887 15.8658 5.47923 15.903C5.49492 15.9222 5.51696 15.9477 5.54565 15.9668C5.57753 15.9879 5.62375 16.0062 5.67848 15.998C5.72796 15.9904 5.76361 15.9644 5.78588 15.9441C5.80828 15.9237 5.82873 15.8991 5.84523 15.8761C5.8782 15.83 5.91919 15.763 5.96676 15.6848C6.34927 15.053 6.7275 14.4204 7.1055 13.7876L7.1811 13.661C7.33017 13.4115 7.47925 13.1619 7.62859 12.9124L14.5727 1.21612C14.7501 0.918588 14.867 0.683416 14.933 0.510266C14.9658 0.424278 14.9883 0.346196 14.9966 0.28065C15.0034 0.225955 15.0054 0.13882 14.9485 0.0708773C14.9075 0.0217292 14.8515 0.000557063 14.8002 8.60787e-06C14.7546 -0.000395208 14.713 0.0134718 14.6801 0.0283559C14.6133 0.0587421 14.5394 0.113291 14.4653 0.180016C14.3138 0.316521 14.1229 0.536013 13.9127 0.826342L4.41374 13.9343L4.39106 13.9648Z' fill='%23231E13'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.70294 13.098C3.70161 13.0959 3.70496 13.1009 3.70294 13.098V13.098ZM3.71425 13.1165L3.70294 13.098C3.70428 13.1003 3.71171 13.1123 3.71425 13.1165Z' fill='%23231E13'/%3E%3C/svg%3E%0A");
+
+}
+.check-item__text a{
+    color: #231e13;
+    text-decoration: underline;
+}
+.check-item__text a:hover{
+	text-decoration: none;
+}
+.services-type__item .check{
+	display: block;
+}
+@media screen and (max-width: 768px) {
+.pricing .services-type{
+	        white-space: normal;
+        overflow: hidden;
+        width: 100%;
+}	
+	.pricing  .price-info{
+		white-space: nowrap;
+    overflow: auto;
+		border: 0;
+	}
+	.table-price__info{
+		padding: 20rem;
+		
+	}
+	.table-price__info ul{
+		flex-direction: column;
+		gap: 20rem;
+	}
+	.table-price .services-type__item>span{
+		        width: 200rem !important;
+        white-space: normal;
+	}
+	.pricing .table-price{
+		white-space: nowrap;
+    overflow: auto;
+		border: 0;
+	}
+	.pricing .table-price .services-type__item{width: 1000rem;}
+	.header-nav ul li.menu-item-has-children.active ul{
+		    position: relative;
+    background: transparent;
+    padding: 0;
+	}
+	.header-nav ul li{
+		margin-bottom: 40rem;
+		width: 100%;
+	}
+	.header-nav ul li.menu-item-has-children ul{
+		padding: 0 40rem;
+		border-bottom: 1rem solid rgba(255,255,255, .2);
+	}
+	.header-nav ul li.menu-item-has-children ul li{
+		        margin-bottom: 24rem;
+	}
+	.header-nav ul li.menu-item-has-children ul li:last-child{
+		margin-bottom: 0;
+	}
+	.header-nav ul li.menu-item-has-children ul li a:hover,
+	.header-nav ul li.menu-item-has-children ul li a{
+		    color: #fff;
+	
+		font: 400 20rem/160% "TV NordEF Regular",sans-serif;
+	}
+	.header-nav .menu{
+		        overflow: auto;
+        max-height: 510rem;
+	}
+	.header-nav ul li.menu-item-has-children.active ul{
+		padding: 40rem 0;
+	}
+	.header-nav ul li.has-sub.active>a:hover, .header-nav ul li.menu-item-has-children.active>a:hover,
+	.header-nav ul li.has-sub.active>a, .header-nav ul li.menu-item-has-children.active>a{
+		color: #FCB82E;
+	}
+	
+	.header-nav ul li.has-sub.active>a:after, .header-nav ul li.menu-item-has-children.active>a:after{
+		top: 4rem;
+		background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1319_28982' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1319_28982)'%3E%3Cpath d='M7.86781 22.0553L6.5625 20.75L18.8631 8.4375H7.68031V6.5625H22.0553V20.9375H20.1803V9.75469L7.86781 22.0553Z' fill='%23FCB82E'/%3E%3C/g%3E%3C/svg%3E%0A");
+	}
+	.pricing  .price-info ul{ border: 0;}
+	.popup-wrap{
+		overflow: auto;
+		
+	}
+	.form-horizontal>.half {
+    width: 100%;
+}
+	.header.active .header-logo{opacity: 0;position:absolute;}
+	.header.active .header-lang {   display: block;
+    margin: 0 auto 0 0;
+}
+}
