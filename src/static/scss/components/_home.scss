@@ -140,6 +140,7 @@
           filter: blur(10px);
         }
       }
+
     }
     &__desc {
       position: relative;
@@ -628,6 +629,11 @@
         opacity: 1;
         object-fit: contain;
         transform: scale(1);
+      }
+    }
+    &._full-video{
+      video{
+        object-fit: cover !important;
       }
     }
   }
@@ -1170,5 +1176,10 @@
         }
       }
     }
+  }
+}
+._full-video{
+  video{
+    object-fit: cover !important;
   }
 }
