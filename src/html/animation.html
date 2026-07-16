@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Bottle Scroll Animation</title>
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background: #f4f0e8;
+			color: #111;
+		}
+
+		body {
+			overflow-x: hidden;
+		}
+
+		.bottle-scroll {
+			position: relative;
+			min-height: 400vh;
+			background: #f4f0e8;
+			overflow: visible;
+		}
+
+		.bottle-stage {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			z-index: 5;
+			pointer-events: none;
+			overflow: hidden;
+		}
+
+		.screens {
+			position: relative;
+			z-index: 10;
+			margin-top: -100vh;
+		}
+
+		.bg-circle {
+			position: absolute;
+			width: 48vw;
+			height: 48vw;
+			left: 50%;
+			top: 52%;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			background: radial-gradient(
+					circle,
+					rgba(255, 255, 255, .95),
+					rgba(255, 255, 255, 0) 65%
+			);
+			z-index: 1;
+			pointer-events: none;
+		}
+
+		/*
+          Головне:
+          розмір пляшки контролюємо через height, не width.
+          36vh + scale 1.08 = приблизно 39vh.
+        */
+		.product {
+			position: absolute;
+			left: 50%;
+			top: 54%;
+			height: 36vh;
+			width: auto;
+			display: inline-block;
+			transform: translate(-50%, -50%);
+			transform-origin: center center;
+			will-change: transform;
+			z-index: 2;
+		}
+
+		.bottle {
+			display: block;
+			height: 100%;
+			width: auto;
+			max-height: 40vh;
+			position: relative;
+			z-index: 1;
+			user-select: none;
+			pointer-events: none;
+		}
+
+		/*
+          Позиція кришки.
+          Якщо треба підкрутити посадку:
+          left — вправо/вліво
+          top — вище/нижче
+          width — розмір кришки
+        */
+		.cap-window {
+			position: absolute;
+			left: 50%;
+			top: -7%;
+			width: 68%;
+			z-index: 2;
+			overflow: hidden;
+			user-select: none;
+			pointer-events: none;
+			will-change: transform;
+			transform-origin: 50% 50%;
+		}
+
+		.cap-strip {
+			display: flex;
+			width: 800%;
+			height: auto;
+			will-change: transform;
+		}
+
+		.cap-strip img {
+			display: block;
+			width: 12.5%;
+			flex: 0 0 12.5%;
+			height: auto;
+			user-select: none;
+			pointer-events: none;
+		}
+
+		.cap-shine {
+			position: absolute;
+			inset: 0;
+			z-index: 3;
+			background: linear-gradient(
+					100deg,
+					rgba(255, 255, 255, 0) 0%,
+					rgba(255, 255, 255, .45) 45%,
+					rgba(255, 255, 255, 0) 75%
+			);
+			transform: translateX(-130%);
+			opacity: .55;
+			pointer-events: none;
+			mix-blend-mode: screen;
+		}
+
+		.neck-glow {
+			position: absolute;
+			left: 50%;
+			top: 4%;
+			width: 68%;
+			aspect-ratio: 1 / .28;
+			border-radius: 50%;
+			border: 2px solid rgba(255, 255, 255, .9);
+			transform: translateX(-50%) scale(0);
+			opacity: 0;
+			z-index: 4;
+			filter: blur(2px);
+			pointer-events: none;
+		}
+
+		/*
+          Екрани йдуть поверх sticky-сцени.
+          Тому текст і пляшка видимі одночасно.
+        */
+		.screens {
+			position: relative;
+			z-index: 10;
+			margin-top: -100vh;
+		}
+
+		.screen {
+			position: relative;
+			height: 100vh;
+			z-index: 10;
+			display: flex;
+			align-items: center;
+			padding: 0 7vw;
+			pointer-events: none;
+		}
+
+		.screen__content {
+			max-width: 48rem;
+			pointer-events: auto;
+		}
+
+		.screen--1 .screen__content {
+			margin-right: auto;
+		}
+
+		.screen--2 .screen__content {
+			margin-left: auto;
+		}
+
+		.screen--3 .screen__content {
+			margin-right: auto;
+		}
+
+		.screen--4 .screen__content {
+			margin-left: auto;
+		}
+
+		.eyebrow {
+			display: inline-flex;
+			align-items: center;
+			min-height: 3.2rem;
+			padding: 0 1.4rem;
+			border: 1px solid rgba(0, 0, 0, .18);
+			border-radius: 999px;
+			font-size: 1.4rem;
+			line-height: 1;
+			margin-bottom: 2rem;
+			background: rgba(255, 255, 255, .45);
+			backdrop-filter: blur(10px);
+		}
+
+		h1,
+		h2 {
+			margin: 0 0 2rem;
+			font-size: clamp(4.2rem, 7vw, 10rem);
+			line-height: .9;
+			letter-spacing: -.06em;
+			font-weight: 600;
+		}
+
+		p {
+			max-width: 42rem;
+			margin: 0;
+			font-size: clamp(1.6rem, 1.4vw, 2rem);
+			line-height: 1.45;
+			color: rgba(0, 0, 0, .68);
+		}
+
+		.btn {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 5.6rem;
+			padding: 0 2.8rem;
+			margin-top: 3rem;
+			border-radius: 999px;
+			border: 0;
+			background: #111;
+			color: #fff;
+			font-size: 1.6rem;
+			cursor: pointer;
+		}
+
+		@media screen and (max-width: 992px) {
+			.product {
+				height: 34vh;
+				top: 58%;
+			}
+
+			.screen {
+				align-items: flex-start;
+				padding: 9rem 2rem 0;
+			}
+
+			.screen--2 .screen__content,
+			.screen--4 .screen__content {
+				margin-left: 0;
+			}
+
+			h1,
+			h2 {
+				font-size: clamp(4rem, 12vw, 7rem);
+			}
+		}
+
+		@media screen and (max-width: 576px) {
+			.product {
+				height: 32vh;
+				top: 62%;
+			}
+
+			.screen {
+				padding-top: 7rem;
+			}
+
+			p {
+				max-width: 32rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+<section class="bottle-scroll">
+	<div class="bottle-stage">
+		<div class="bg-circle"></div>
+
+		<div class="product">
+			<img class="bottle" src="../static/images/bottom.png" alt="Bottle">
+
+			<div class="cap-window">
+				<div class="cap-strip">
+					<img src="../static/images/top.png" alt="">
+					<img src="../static/images/top.png" alt="">
+					<img src="../static/images/top.png" alt="">
+					<img src="../static/images/top.png" alt="">
+					<img src="../static/images/top.png" alt="">
+					<img src="../static/images/top.png" alt="">
+					<img src="../static/images/top.png" alt="">
+					<img src="../static/images/top.png" alt="">
+				</div>
+
+				<span class="cap-shine"></span>
+			</div>
+
+			<div class="neck-glow"></div>
+		</div>
+	</div>
+
+	<div class="screens">
+		<div class="screen screen--1">
+			<div class="screen__content">
+				<div class="eyebrow">Step 01</div>
+				<h1>Title 1</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque earum expedita id neque, recusandae sint! Aperiam blanditiis doloremque eius illum impedit inventore ipsam iure mollitia nesciunt nisi, numquam odit optio placeat possimus praesentium quia ratione sint tempore voluptas voluptatibus? Ab alias ducimus eveniet ipsam nesciunt provident quis temporibus veniam voluptatibus?</p>
+			</div>
+		</div>
+
+		<div class="screen screen--2">
+			<div class="screen__content">
+				<div class="eyebrow">Step 02</div>
+				<h1>Title 2</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque earum expedita id neque, recusandae sint! Aperiam blanditiis doloremque eius illum impedit inventore ipsam iure mollitia nesciunt nisi, numquam odit optio placeat possimus praesentium quia ratione sint tempore voluptas voluptatibus? Ab alias ducimus eveniet ipsam nesciunt provident quis temporibus veniam voluptatibus?</p>
+			</div>
+		</div>
+
+		<div class="screen screen--3">
+			<div class="screen__content">
+				<div class="eyebrow">Step 03</div>
+				<h1>Title 3</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque earum expedita id neque, recusandae sint! Aperiam blanditiis doloremque eius illum impedit inventore ipsam iure mollitia nesciunt nisi, numquam odit optio placeat possimus praesentium quia ratione sint tempore voluptas voluptatibus? Ab alias ducimus eveniet ipsam nesciunt provident quis temporibus veniam voluptatibus?</p>
+			</div>
+		</div>
+
+		<div class="screen screen--4">
+			<div class="screen__content">
+				<div class="eyebrow">Step 04</div>
+				<h1>Title 1</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque earum expedita id neque, recusandae sint! Aperiam blanditiis doloremque eius illum impedit inventore ipsam iure mollitia nesciunt nisi, numquam odit optio placeat possimus praesentium quia ratione sint tempore voluptas voluptatibus? Ab alias ducimus eveniet ipsam nesciunt provident quis temporibus veniam voluptatibus?</p>
+				<button class="btn" type="button">Explore product</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+<script>
+	window.addEventListener("load", function () {
+		gsap.registerPlugin(ScrollTrigger);
+
+		const product = document.querySelector(".product");
+		const capWindow = document.querySelector(".cap-window");
+		const capStrip = document.querySelector(".cap-strip");
+		const capShine = document.querySelector(".cap-shine");
+		const glow = document.querySelector(".neck-glow");
+
+		if (!product || !capWindow || !capStrip || !capShine || !glow) return;
+
+		gsap.set(product, {
+			xPercent: -50,
+			yPercent: -50,
+			x: 0,
+			y: 0,
+			scale: 1,
+			rotate: 0
+		});
+
+		/*
+          Кришка по центру горлечка.
+          Тут НЕМАЄ scaleX / scaleY.
+        */
+		gsap.set(capWindow, {
+			xPercent: -50,
+			y: "-75%"
+		});
+
+		gsap.set(capStrip, {
+			xPercent: 0
+		});
+
+		gsap.set(capShine, {
+			xPercent: -130
+		});
+
+		gsap.set(glow, {
+			xPercent: -50,
+			scale: 0,
+			opacity: 0
+		});
+
+		const tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".bottle-scroll",
+				start: "top top",
+				end: "bottom bottom",
+				scrub: 1,
+				pin: ".bottle-stage",
+				pinSpacing: false,
+				anticipatePin: 1,
+				invalidateOnRefresh: true
+				// markers: true
+			}
+		});
+
+		/*
+          SCREEN 1 — кришка підлітає до пляшки.
+        */
+		tl.to(capWindow, {
+			y: "-18%",
+			duration: 1,
+			ease: "power2.inOut"
+		}, 0);
+
+		/*
+          Імітація обертання кришки через рух стрічки.
+        */
+		tl.to(capStrip, {
+			xPercent: -75,
+			duration: 1,
+			ease: "none"
+		}, 0);
+
+		/*
+          Блік по кришці.
+        */
+		tl.to(capShine, {
+			xPercent: 180,
+			duration: .9,
+			ease: "none"
+		}, .05);
+
+		/*
+          Кришка сідає на горлечко.
+          Тут також НЕМАЄ scale.
+        */
+		tl.to(capWindow, {
+			y: "0%",
+			duration: .38,
+			ease: "back.out(1.7)"
+		});
+
+		/*
+          Фінальне докручування стрічки.
+        */
+		tl.to(capStrip, {
+			xPercent: -87.5,
+			duration: .38,
+			ease: "none"
+		}, "<");
+
+		/*
+          Glow-ефект посадки.
+        */
+		tl.to(glow, {
+			scale: 1,
+			opacity: 1,
+			duration: .18,
+			ease: "power2.out"
+		}, "<0.12");
+
+		tl.to(glow, {
+			scale: 1.65,
+			opacity: 0,
+			duration: .35,
+			ease: "power2.out"
+		});
+
+		/*
+          Маленький bounce пляшки після закручування.
+        */
+		tl.to(product, {
+			scale: 1.56,
+			duration: .18,
+			x: "-30vw",
+			y: "0vh",
+			ease: "power1.out"
+		}, "<");
+
+		tl.to(product, {
+			scale: 1.56,
+			duration: .24,
+			rotate: 8,
+			ease: "power1.inOut"
+		});
+
+		/*
+          SCREEN 2 — пляшка справа.
+        */
+		tl.to(product, {
+			x: "10vw",
+			y: "0vh",
+			scale: 1.58,
+			rotate: -8,
+			duration: 1,
+			ease: "power2.inOut"
+		});
+
+		/*
+          SCREEN 3 — пляшка зліва.
+        */
+		tl.to(product, {
+			x: "20vw",
+			y: "2vh",
+			scale: .9,
+			rotate: 4,
+			duration: 1,
+			ease: "power2.inOut"
+		});
+
+		/*
+          SCREEN 4 — фінальна позиція.
+        */
+		tl.to(product, {
+			x: "-20vw",
+			y: "10vh",
+			scale: .78,
+			rotate: 0,
+			duration: 1,
+			ease: "power2.inOut"
+		});
+
+		ScrollTrigger.refresh();
+	});
+</script>
+
+</body>
+</html>

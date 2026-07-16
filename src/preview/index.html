@@ -16,882 +16,477 @@
 <!-- build:css ../static/css/style.css -->
 <!-- endbuild -->
 <link rel="stylesheet" href="../static/css/style.css">
-<link rel="stylesheet" href="../static/css/fancybox.css">
 
 </head>
 
 <body>
 	<!--page-wrapper-->
 	<div class="page-wrapper">
-		   <header class="header">
-       <div class="container">
-           <div class="header-logo">
-               <a href="#">
-                   <img src="../static/images/logo.png" alt="logo">
-               </a>
-           </div>
-           <div class="header-nav">
-               <ul>
-                  <li><a data-scroll="services" href="#">Services</a></li>
-                  <li><a data-scroll="process" href="#">Process</a></li>
-                  <li><a data-scroll="team" href="#">Team</a></li>
-                  <li><a data-scroll="reviews" href="#">Reviews</a></li>
-                  <li><a data-scroll="pricing" href="#">Pricing</a></li>
-                  <li><a data-scroll="contact" href="#">Contact</a></li>
-               </ul>
-           </div>
-           <div class="header-action">
-               <div class="header-action__info">
-                   <a href="tel:7373287003" target="_blank" class="_icon">
-                       <img src="../static/images/phone.svg" alt="phone">
-                       <span>737-328-7003</span>
-                   </a>
-                   <span>Mo–Sun 8am–8pm</span>
-               </div>
-               <div class="header-action__btn">
-                   <a href="#" class="btn-primary" data-scroll="contact">Get a Quote</a>
-               </div>
-           </div>
-       </div>
-       <div class="header-overlay"></div>
-   </header>
+		<header class="header">
+    <div class="container">
+        <div class="header-logo">
+            <a href="#">
+                <img src="../static/images/logo.svg" alt="Priority Auto Repair">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+            <ul>
+                <li><a data-scroll="service" href="#service">Services</a></li>
+                <li><a data-scroll="about" href="#about">About</a></li>
+                <li><a data-scroll="work" href="#work">Work</a></li>
+                <li><a data-scroll="contact" href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="header-action">
+            <button type="button" class="btn btn-dark" data-scroll="contact">
+                <span>Get a Quote</span>
+            </button>
+        </div>
+        <button type="button" class="header-burger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+    <div class="header-overlay"></div>
+</header>
 		<!--page-content-->
-		<div class="main-content">
-			<section class="hero" aria-labelledby="hero-title">
+		<main class="main-content">
+			<section class="hero">
 				<div class="hero-bg">
-					<img src="../static/images/hero.png" alt="Fat Pug Moving team" />
+					<img src="../static/images/hero-bg.png" alt="hero-bg">
 				</div>
-
 				<div class="container">
-					<div class="hero-content">
-						<div class="eyebrow">
-							<span class="eyebrow-icon"></span>
-							Austin's Top-Rated Moving Company
-						</div>
-
-						<h1 class="hero-title">Top-Rated Moving Company in <span>Austin</span> &amp; Nearby</h1>
-						<div class="hero-text">
-							Stress-free local and long-distance moves, handled by experienced professionals who care about your home and your time.
-
-						</div>
-
-						<div class="hero-actions">
-							<a class="btn btn-primary" data-scroll="contact" href="#">Get Your Free Quote</a>
-							<a class="btn btn-light" href="tel:737-328-7003" target="_blank">Call 737-328-7003</a>
-						</div>
+					<div class="hero-media">
+						<video autoplay muted loop playsinline>
+							<source
+									src="../static/images/hero-media.mp4"
+									type="video/mp4" />
+							<source>
+						</video>
 					</div>
-					<div class="hero-form">
-						<div class="hero-form__title">Get Your Free Moving Quote</div>
-
-					<form class="" id="quote" action="#" method="post">
-						<div class="quote-form__grid">
-							<div class="modal-input">
-								<label>
-									<span>Your Name *</span>
-								</label>
-								<input type="text" name="name" placeholder="Your Name" required />
-
-							</div>
-							<div class="modal-input _half">
-								<label>
-									<span>Phone *</span>
-								</label>
-								<input type="tel" name="phone" placeholder="Phone" required />
-
-							</div>
-							<div class="modal-input _half">
-								<label>
-									<span>Email *</span>
-								</label>
-								<input type="email" name="email" placeholder="Email Address" required />
-
-							</div>
-
-							<div class="modal-input _half">
-								<label>
-									<span>Moving From </span>
-								</label>
-								<input type="text" name="moving_from" placeholder="Austin, TX"  />
-
-							</div>
-							<div class="modal-input _half">
-								<label>
-									<span>Moving To </span>
-								</label>
-								<input type="text" name="moving_to" placeholder="Dallas, TX"  />
-
-							</div>
-							<div class="modal-input _half">
-								<label>
-									<span>Preferred Move Date</span>
-								</label>
-								<input type="text" name="moving_date" placeholder="Moving Date" />
-
-							</div>
-							<div class="modal-input _half">
-								<label>
-									<span>Home Size / Move Size  </span>
-								</label>
-								<input type="text" name="moving_date" placeholder="Dallas, TX" />
-
-							</div>
-							<div class="modal-input">
-								<label>
-									<span>Additional Details</span>
-								</label>
-								<textarea name="message" placeholder="Any special requirements, large items, stairs, etc."></textarea>
-
-							</div>
-
+					<div class="hero-desc">
+						<div class="hero-title" data-aos="fade-up">
+							Commercial Photo, Video <span>& AI Content</span>
 						</div>
-						<button class="btn btn-primary" type="submit">Request Your Quote</button>
-					</form>
-					<div class="quote-form__info">
-						By submitting this form, you agree to receive appointment reminders, notifications, and marketing updates via SMS to the phone number provided. Message and data rates may apply. You can opt out at any time by replying STOP.
-						<a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
-					</div>
+						<div class="hero-info">
+							<div class="hero-text" data-aos="fade-up" >
+								Premium visual content for products, restaurants, real estate <span>and businesses in Long Island, NY.</span>
+							</div>
+							<div class="hero-link" data-aos="fade-up">
+								<button type="button" data-scroll="#works" class="btn btn-primary"><span>View Portfolio</span></button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
-
-			<section class="stats" aria-label="Company highlights">
+			<section class="service" id="service">
 				<div class="container">
-					<ul class="stats-list">
-						<li class="stats-tem">
-							<span class="stats-icon">
-								<img src="../static/images/ic-rating.svg" alt="rating">
-							</span>
-							<span>Google</span>
-						</li>
+					<div class="title-section" data-aos="fade-up">What we create</div>
+					<div class="service-wrap" data-aos="fade-right">
+							<div  class="service-item" data-video="../static/images/video/service-1.mp4">
+								<div class="service-item__media">
+									<img src="../static/images/service-1.png" alt="service-1">
+								</div>
 
-						<li class="stats-tem">
-							<span class="stats-icon">
-								<img src="../static/images/ic-licensed.svg" alt="licensed">
-							</span>
-							<span>Licensed & Insured</span>
-						</li>
+								<div class="service-item__desc">
+									<div class="service-item__number">01</div>
+									<div class="service-item__title">Commercial Photography</div>
+									<div class="service-item__text">
+										Product, food, lifestyle and real estate photography created for websites, ads, listings and social media.
+									</div>
+								</div>
+							</div>
 
-						<li class="stats-tem">
-							<span class="stats-icon">
-								<img src="../static/images/ic-rating.svg" alt="rating">
-							</span>
-							<span>4.9 Rating Based on 700+ Reviews</span>
-						</li>
+							<div  class="service-item" data-video="../static/images/video/service-2.mp4">
+								<div class="service-item__media">
+									<img src="../static/images/service-2.png" alt="service-2">
+								</div>
 
-						<li class="stats-tem">
-							<span class="stats-icon">
-								<img src="../static/images/ic-check.svg" alt="">
-							</span>
-							<span>No Hidden Fees</span>
-						</li>
+								<div class="service-item__desc">
+									<div class="service-item__number">02</div>
+									<div class="service-item__title">Commercial Video</div>
+									<div class="service-item__text">
+										Short-form video, promotional clips and visual stories for businesses that need stronger digital presence.
+									</div>
+								</div>
+							</div>
 
-						<li class="stats-tem">
-							<span class="stats-icon">
-								<img src="../static/images/ic-user.svg" alt="user">
-							</span>
-							<span>Background Checked</span>
-						</li>
-					</ul>
+							<div  class="service-item" data-video="../static/images/video/service-3.mp4">
+								<div class="service-item__media">
+									<img src="../static/images/service-3.png" alt="service-3">
+								</div>
+
+								<div class="service-item__desc">
+									<div class="service-item__number">03</div>
+									<div class="service-item__title">AI Content</div>
+									<div class="service-item__text">
+										AI-powered visual concepts, creative variations and campaign-ready content for modern brands.
+									</div>
+								</div>
+							</div>
+						</div>
 				</div>
 			</section>
-
-			<section class="trust" id="about" aria-labelledby="trust-title">
+			<section class="businesses" id="businesses">
+				<div class="businesses-bg"><img src="../static/images/about-bg.png" alt="about-bg"></div>
 				<div class="container">
-					<div class="trust-content">
-						<div class="section-label">Why Choose Us</div>
-						<div class="section-title">
-							<h2 id="trust-title">Why Customers Trust Our Team</h2>
-						</div>
-						<div class="section-text">
-							A move can already feel overwhelming. The last thing you need is a moving company that shows up late, damages furniture, or leaves you guessing about the final price.
-						</div>
-						<ul class="check-list">
-							<li>On-time crews that respect your schedule</li>
-							<li>Straightforward communication throughout the entire move</li>
-							<li>Careful protection of furniture, floors, walls, and fragile items</li>
-							<li>Friendly, experienced movers who treat your home with respect</li>
-							<li>Transparent pricing with no surprise charges</li>
-							<li>A smooth moving experience that feels professional from day one</li>
-						</ul>
-					</div>
-					<div class="trust-image">
-						<img src="../static/images/trust-image.png" alt="Movers packing boxes inside a home" />
-					</div>
-				</div>
-			</section>
-
-			<section class="services" id="services" aria-labelledby="services-title">
-				<div class="container">
-					<div class="section-label">Services</div>
-					<div class="section-head">
-						<div class="section-title"><h2>Our Moving Services</h2></div>
-						<div class="section-text">
-							<p>
-								Full-service moving for homes and businesses across Austin and beyond — handled by trained crews who take pride in their craft.
-							</p>
-						</div>
-					</div>
-
-					<div class="services-grid">
-						<div class="service-card">
-							<div class="service-card__media"><img src="../static/images/services-1.png" alt="Local moving truck" /></div>
-							<div class="service-card__content">
-								<h3>Local Moving</h3>
-								<p>
-									Whether you're moving from a downtown apartment, condo, or family home, our team handles local moves with careful planning and attention to detail. We know how to navigate tight hallways, elevators, parking restrictions, and busy neighborhoods while keeping your move organized and efficient.
-								</p>
-							</div>
-						</div>
-
-						<div class="service-card">
-							<div class="service-card__media"><img src="../static/images/services-2.png" alt="Apartment moving" /></div>
-							<div class="service-card__content">
-								<h3>Professional Packing Services</h3>
-								<p>
-									Packing can be one of the most time-consuming parts of moving. We offer full and partial packing services using professional materials and proven packing methods to help protect your belongings during transport. Need help with only fragile items or specific rooms? We can do that too.								</p>
-							</div>
-						</div>
-
-						<div class="service-card">
-							<div class="service-card__media"><img src="../static/images/services-3.png" alt="Residential moving" /></div>
-							<div class="service-card__content">
-								<h3>Commercial & Office Moving</h3>
-								<p>
-									We help businesses relocate quickly and efficiently with minimal disruption to daily operations. Our team carefully handles office furniture, equipment, workstations, and inventory so your business can get back up and running as soon as possible.
-								</p>
-							</div>
-						</div>
-
-						<div class="service-card">
-							<div class="service-card__media"><img src="../static/images/services-4.png" alt="Long distance moving" /></div>
-							<div class="service-card__content">
-								<h3>Long Distance Moving</h3>
-								<p>
-									Need to move farther than across town? Our team helps plan and complete longer moves with dependable support.
-								</p>
-							</div>
-						</div>
-
-						<div class="service-card">
-							<div class="service-card__media">
-								<img src="../static/images/services-5.png" alt="Packing and unpacking services" />
-							</div>
-							<div class="service-card__content">
-								<h3>Long-Distance Moving</h3>
-								<p>
-									Long-distance moves require more than just transportation. We create a structured moving plan, coordinate timelines, and keep communication clear throughout the process. Your belongings are packed securely, transported safely, and delivered with care and accountability.
-								</p>
-							</div>
-						</div>
-
-						<div class="service-card">
-							<div class="service-card__media"><img src="../static/images/services-6.png" alt="Furniture assembly" /></div>
-							<div class="service-card__content">
-								<h3>Furniture Disassembly & Assembly</h3>
-								<p>
-									Our movers carefully disassemble and reassemble furniture to make the moving process easier and safer. Beds, sectionals, desks, dining tables, wardrobes, and other large furniture are assembled properly and securely in your new space.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="cta-strip">
-						<h2>Need a careful, professional moving team?</h2>
-						<div class="cta-strip__actions">
-							<a class="btn btn-dark" href="#" data-scroll="contact" >Get a Free Quote</a>
-							<a class="btn btn-light" href="tel:7377777221" target="_blank">Call 737 777 7221</a>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="process" id="process" aria-labelledby="process-title">
-				<div class="container">
-					<div class="section-label">Process</div>
-					<div class="section-head">
-						<div class="section-title"><h2>How The Process Works</h2></div>
-						<div class="section-text">
-							<p>
-								A simple, transparent moving process designed to give you confidence from the first call to the final box.
-							</p>
-						</div>
-					</div>
-					<div class="process-wrap">
-					<div class="process-content">
-						<div class="process-list">
-							<div class="process-item">
-								<span class="process-item__number">1</span>
-								<div class="process-item__desc">
-									<h3>Request Your Free Quote</h3>
-									<p>
-										Getting started is simple. Call our team or fill out a quick online form, and we'll ask the right questions from the beginning to give you an accurate and realistic estimate. No misleading low prices that suddenly increase on moving day.
-									</p>
-								</div>
-							</div>
-
-							<div class="process-item">
-								<span class="process-item__number">2</span>
-								<div class="process-item__desc">
-									<h3>Transparent Pricing & Easy Scheduling</h3>
-									<p>
-										Once we understand your move, we provide clear pricing and help you choose the best moving date for your schedule. We explain everything upfront, so there are no surprises, hidden fees, or confusion later.
-									</p>
-								</div>
-							</div>
-
-							<div class="process-item">
-								<span class="process-item__number">3</span>
-								<div class="process-item__desc">
-									<h3>Professional Moving Day</h3>
-									<p>
-										On moving day, our trained movers arrive on time, fully prepared, and ready to work. We protect floors, walls, doorways, and furniture while handling every item with care and efficiency.
-									</p>
-								</div>
-							</div>
-						</div>
-						<a class="btn btn-primary" data-scroll="contact"  href="#">Get Your Quote</a>
-					</div>
-					<div class="process-image">
-						<img src="../static/images/process-img.png" alt="Mover carrying furniture on a dolly" />
-					</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="gallery" id="gallery" aria-labelledby="gallery-title">
-				<div class="container">
-					<div class="top-section">
-						<div class="section-label">Gallery</div>
-						<div class="section-title">
-							<h2>Real People. Real Protection. Real Care.</h2>
-						</div>
-					</div>
-
-					<div class="gallery-grid">
-						<div class="slide">
-							<div class="gallery-card">
-								<img src="../static/images/gallery-1.png" alt="Moving team photo">
-								<span>Friendly trained movers</span>
-							</div>
-						</div>
-						<div class="slide">
-							<div class="gallery-card">
-								<img src="../static/images/gallery-2.png" alt="Moving boxes and truck">
-								<span>Professional packing</span>
-							</div>
-						</div>
-						<div class="slide">
-							<div class="gallery-card">
-								<img src="../static/images/gallery-3.png" alt="Moving truck">
-								<span>Clean equipped truck</span>
-							</div>
-						</div>
-						<div class="slide">
-							<div class="gallery-card">
-								<img src="../static/images/gallery-4.png" alt="Mover protecting floor">
-								<span>Floor &amp; wall protection</span>
-							</div>
-						</div>
-						<div class="slide">
-							<div class="gallery-card">
-								<img src="../static/images/gallery-5.png" alt="Mover handling furniture">
-								<span>Careful handling</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="team" id="team" aria-labelledby="team-title">
-				<div class="container ">
-					<div class="team-image">
-						<img src="../static/images/team.png" alt="Fat Pug Moving crew standing by moving truck" />
-					</div>
-
-					<div class="team-content">
-						<div class="section-label">Our Team</div>
-						<div class="section-title">
-							<h2>Trained. Trusted. Background-Checked.</h2>
-						</div>
-						<div class="section-text">
-							<p>
-								A great move starts with a great team. Our movers are professionally trained not only in safe moving techniques, but also in how to communicate, protect your home, and create a smooth customer experience from start to finish.
-							</p>
-							<p>
-								Every crew member has successfully passed a background check and is fully authorized to work in the state. Our drivers hold valid commercial licenses, and our movers are physically prepared for the demands of daily moving work, helping ensure every move is handled safely, efficiently, and professionally.
-							</p>
-							<ul class="feature-list">
-								<li>Background Checked</li>
-								<li>Trained & Insured</li>
-								<li>Licensed Drivers</li>
-								<li>Uniformed Crews</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="reviews" id="reviews" aria-labelledby="reviews-title">
-				<div class="container">
-					<div class="section-label">Reviews</div>
-
-					<div class="section-head">
-						<div class="section-title">
-							<h2 id="reviews-title">What Our Customers Say</h2>
-						</div>
-						<div class="section-text">
-						<p>
-							Our reputation is built one successful move at a time. Customers trust our team because we show up on time, communicate clearly, handle belongings with care, and make the moving process feel far less stressful.
-						</p>
-						</div>
-					</div>
-
-					<div class="reviews-slider" aria-label="Customer reviews">
-						<div class="slide">
-						<div class="review-card">
-							<div class="review-card__top">
-								<div class="review-card__avatar"></div>
-								<div  class="review-card__info">
-									<h3>Kasi R.</h3>
-									<span>Dec 17, 2025</span>
-								</div>
-								<span class="review-card__google">
-									<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.809 5.33941C16.402 5.33941 18.1511 6.45946 19.1484 7.39539L23.0456 3.59029C20.6521 1.36554 17.5374 0 13.809 0C8.40824 0 3.74393 3.09931 1.47314 7.6102L5.938 11.0777C7.05805 7.74828 10.1574 5.33941 13.809 5.33941Z" fill="#EA4335"/>
-											<path d="M27.066 14.115C27.066 12.9796 26.974 12.1511 26.7745 11.2918H13.8096V16.4164H21.4198C21.2663 17.6899 20.4378 19.6078 18.5966 20.8966L22.9541 24.2721C25.5624 21.8633 27.066 18.319 27.066 14.115Z" fill="#4285F4"/>
-											<path d="M5.95314 16.5402C5.66162 15.681 5.49284 14.7604 5.49284 13.8091C5.49284 12.8579 5.66162 11.9373 5.93779 11.0781L1.47294 7.6105C0.53701 9.48237 0 11.5844 0 13.8091C0 16.0339 0.53701 18.1359 1.47294 20.0078L5.95314 16.5402Z" fill="#FBBC05"/>
-											<path d="M13.8093 27.6175C17.5377 27.6175 20.6677 26.3901 22.9538 24.2727L18.5964 20.8972C17.4303 21.7104 15.8653 22.2781 13.8093 22.2781C10.1576 22.2781 7.05833 19.8693 5.95362 16.5398L1.48877 20.0073C3.75955 24.5182 8.40852 27.6175 13.8093 27.6175Z" fill="#34A853"/>
-									</svg>
-								</span>
-							</div>
-							<div class="review-card__stars" aria-label="5 stars">
-								<svg width="108" height="24" viewBox="0 0 108 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M10 0L12.9389 5.95492L19.5106 6.90983L14.7553 11.5451L15.8779 18.0902L10 15L4.12215 18.0902L5.24472 11.5451L0.489435 6.90983L7.06107 5.95492L10 0Z" fill="#FFCE1B"/>
-								<path d="M32 0L34.9389 5.95492L41.5106 6.90983L36.7553 11.5451L37.8779 18.0902L32 15L26.1221 18.0902L27.2447 11.5451L22.4894 6.90983L29.0611 5.95492L32 0Z" fill="#FFCE1B"/>
-								<path d="M54 0L56.9389 5.95492L63.5106 6.90983L58.7553 11.5451L59.8779 18.0902L54 15L48.1221 18.0902L49.2447 11.5451L44.4894 6.90983L51.0611 5.95492L54 0Z" fill="#FFCE1B"/>
-								<path d="M76 0L78.9389 5.95492L85.5106 6.90983L80.7553 11.5451L81.8779 18.0902L76 15L70.1221 18.0902L71.2447 11.5451L66.4894 6.90983L73.0611 5.95492L76 0Z" fill="#FFCE1B"/>
-								<path d="M98 0L100.939 5.95492L107.511 6.90983L102.755 11.5451L103.878 18.0902L98 15L92.1221 18.0902L93.2447 11.5451L88.4894 6.90983L95.0611 5.95492L98 0Z" fill="#FFCE1B"/>
-								</svg>
-							</div>
-							<div class="review-card__text">
-							<p>
-								Alex and Andrew arrived at exactly 8am today and after a quick review of the project they got to work wrapping up the furniture and got things going quickly. They got everything moved and drove to the PODs facility where they organized everything. I will be using them again when I need anything moved!							</p>
-							</div>
-						</div>
-						</div>
-						<div class="slide">
-						<div class="review-card">
-							<div class="review-card__top">
-								<div class="review-card__avatar"></div>
-								<div  class="review-card__info">
-									<h3>Juliet</h3>
-									<span>
-										Dec 4, 2025</span>
-								</div>
-								<span class="review-card__google"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.809 5.33941C16.402 5.33941 18.1511 6.45946 19.1484 7.39539L23.0456 3.59029C20.6521 1.36554 17.5374 0 13.809 0C8.40824 0 3.74393 3.09931 1.47314 7.6102L5.938 11.0777C7.05805 7.74828 10.1574 5.33941 13.809 5.33941Z" fill="#EA4335"/>
-											<path d="M27.066 14.115C27.066 12.9796 26.974 12.1511 26.7745 11.2918H13.8096V16.4164H21.4198C21.2663 17.6899 20.4378 19.6078 18.5966 20.8966L22.9541 24.2721C25.5624 21.8633 27.066 18.319 27.066 14.115Z" fill="#4285F4"/>
-											<path d="M5.95314 16.5402C5.66162 15.681 5.49284 14.7604 5.49284 13.8091C5.49284 12.8579 5.66162 11.9373 5.93779 11.0781L1.47294 7.6105C0.53701 9.48237 0 11.5844 0 13.8091C0 16.0339 0.53701 18.1359 1.47294 20.0078L5.95314 16.5402Z" fill="#FBBC05"/>
-											<path d="M13.8093 27.6175C17.5377 27.6175 20.6677 26.3901 22.9538 24.2727L18.5964 20.8972C17.4303 21.7104 15.8653 22.2781 13.8093 22.2781C10.1576 22.2781 7.05833 19.8693 5.95362 16.5398L1.48877 20.0073C3.75955 24.5182 8.40852 27.6175 13.8093 27.6175Z" fill="#34A853"/>
-									</svg></span>
-							</div>
-							<div class="review-card__stars" aria-label="5 stars"><svg width="108" height="24" viewBox="0 0 108 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M10 0L12.9389 5.95492L19.5106 6.90983L14.7553 11.5451L15.8779 18.0902L10 15L4.12215 18.0902L5.24472 11.5451L0.489435 6.90983L7.06107 5.95492L10 0Z" fill="#FFCE1B"/>
-								<path d="M32 0L34.9389 5.95492L41.5106 6.90983L36.7553 11.5451L37.8779 18.0902L32 15L26.1221 18.0902L27.2447 11.5451L22.4894 6.90983L29.0611 5.95492L32 0Z" fill="#FFCE1B"/>
-								<path d="M54 0L56.9389 5.95492L63.5106 6.90983L58.7553 11.5451L59.8779 18.0902L54 15L48.1221 18.0902L49.2447 11.5451L44.4894 6.90983L51.0611 5.95492L54 0Z" fill="#FFCE1B"/>
-								<path d="M76 0L78.9389 5.95492L85.5106 6.90983L80.7553 11.5451L81.8779 18.0902L76 15L70.1221 18.0902L71.2447 11.5451L66.4894 6.90983L73.0611 5.95492L76 0Z" fill="#FFCE1B"/>
-								<path d="M98 0L100.939 5.95492L107.511 6.90983L102.755 11.5451L103.878 18.0902L98 15L92.1221 18.0902L93.2447 11.5451L88.4894 6.90983L95.0611 5.95492L98 0Z" fill="#FFCE1B"/>
-							</svg></div>
-							<div class="review-card__text">
-							<p>
-								They pack and moved us from 2 2-bedroom condos into our 4 bedroom house all in one day!
-								We spent Thanksgiving dinner gushing about them to our family! We were so impressed at how fast and efficiently they all worked for 11 hours straight!
-								We booked them a week from our desired move in day on the weekend and they had 3 guys who wrapped every dish and bottle on our bars — there were a lot! If they offer you packing supplies, say yes but budget it in. They were much cheaper than what you can get at Home Depot. They even moved a heavy dresser up the narrow stairwell for us.
-
-								The owner also did a video walk through with me to figure out how many movers and how many hours we would need.
-
-								I waited to do this review until after we unpacked so I can attest that we had no damage to any glasses/furniture etc.
-
-								Thank you so much for getting us into our new home for Thanksgiving!!							</p>
-							</div>
-						</div>
-						</div>
-						<div class="slide">
-						<div class="review-card">
-							<div class="review-card__top">
-								<div class="review-card__avatar"></div>
-								<div class="review-card__info">
-									<h3>Yalda T.</h3>
-									<span>Nov 28, 2025</span>
-								</div>
-								<span class="review-card__google"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.809 5.33941C16.402 5.33941 18.1511 6.45946 19.1484 7.39539L23.0456 3.59029C20.6521 1.36554 17.5374 0 13.809 0C8.40824 0 3.74393 3.09931 1.47314 7.6102L5.938 11.0777C7.05805 7.74828 10.1574 5.33941 13.809 5.33941Z" fill="#EA4335"/>
-											<path d="M27.066 14.115C27.066 12.9796 26.974 12.1511 26.7745 11.2918H13.8096V16.4164H21.4198C21.2663 17.6899 20.4378 19.6078 18.5966 20.8966L22.9541 24.2721C25.5624 21.8633 27.066 18.319 27.066 14.115Z" fill="#4285F4"/>
-											<path d="M5.95314 16.5402C5.66162 15.681 5.49284 14.7604 5.49284 13.8091C5.49284 12.8579 5.66162 11.9373 5.93779 11.0781L1.47294 7.6105C0.53701 9.48237 0 11.5844 0 13.8091C0 16.0339 0.53701 18.1359 1.47294 20.0078L5.95314 16.5402Z" fill="#FBBC05"/>
-											<path d="M13.8093 27.6175C17.5377 27.6175 20.6677 26.3901 22.9538 24.2727L18.5964 20.8972C17.4303 21.7104 15.8653 22.2781 13.8093 22.2781C10.1576 22.2781 7.05833 19.8693 5.95362 16.5398L1.48877 20.0073C3.75955 24.5182 8.40852 27.6175 13.8093 27.6175Z" fill="#34A853"/>
-									</svg></span>
-							</div>
-							<div class="review-card__stars" aria-label="5 stars"><svg width="108" height="24" viewBox="0 0 108 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M10 0L12.9389 5.95492L19.5106 6.90983L14.7553 11.5451L15.8779 18.0902L10 15L4.12215 18.0902L5.24472 11.5451L0.489435 6.90983L7.06107 5.95492L10 0Z" fill="#FFCE1B"/>
-								<path d="M32 0L34.9389 5.95492L41.5106 6.90983L36.7553 11.5451L37.8779 18.0902L32 15L26.1221 18.0902L27.2447 11.5451L22.4894 6.90983L29.0611 5.95492L32 0Z" fill="#FFCE1B"/>
-								<path d="M54 0L56.9389 5.95492L63.5106 6.90983L58.7553 11.5451L59.8779 18.0902L54 15L48.1221 18.0902L49.2447 11.5451L44.4894 6.90983L51.0611 5.95492L54 0Z" fill="#FFCE1B"/>
-								<path d="M76 0L78.9389 5.95492L85.5106 6.90983L80.7553 11.5451L81.8779 18.0902L76 15L70.1221 18.0902L71.2447 11.5451L66.4894 6.90983L73.0611 5.95492L76 0Z" fill="#FFCE1B"/>
-								<path d="M98 0L100.939 5.95492L107.511 6.90983L102.755 11.5451L103.878 18.0902L98 15L92.1221 18.0902L93.2447 11.5451L88.4894 6.90983L95.0611 5.95492L98 0Z" fill="#FFCE1B"/>
-							</svg></div>
-							<div class="review-card__text">
-							<p>
-								These guys are absolutely amazing! They wasted no time, they brought a huge truck and did an amazing job on packing and moving! They made sure every furniture was moved safely! Super nice people! Great pricing and communication! Our best experience so far; I would definitely personally book them again and I would recommend them to anyone!							</p>
-							</div>
-						</div>
-						</div>
-						<div class="slide">
-							<div class="review-card">
-							<div class="review-card__top">
-								<div class="review-card__avatar"></div>
-								<div class="review-card__info">
-									<h3>Vitalii V.</h3>
-									<span>Aug 4, 2025</span>
-								</div>
-								<span class="review-card__google"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.809 5.33941C16.402 5.33941 18.1511 6.45946 19.1484 7.39539L23.0456 3.59029C20.6521 1.36554 17.5374 0 13.809 0C8.40824 0 3.74393 3.09931 1.47314 7.6102L5.938 11.0777C7.05805 7.74828 10.1574 5.33941 13.809 5.33941Z" fill="#EA4335"/>
-											<path d="M27.066 14.115C27.066 12.9796 26.974 12.1511 26.7745 11.2918H13.8096V16.4164H21.4198C21.2663 17.6899 20.4378 19.6078 18.5966 20.8966L22.9541 24.2721C25.5624 21.8633 27.066 18.319 27.066 14.115Z" fill="#4285F4"/>
-											<path d="M5.95314 16.5402C5.66162 15.681 5.49284 14.7604 5.49284 13.8091C5.49284 12.8579 5.66162 11.9373 5.93779 11.0781L1.47294 7.6105C0.53701 9.48237 0 11.5844 0 13.8091C0 16.0339 0.53701 18.1359 1.47294 20.0078L5.95314 16.5402Z" fill="#FBBC05"/>
-											<path d="M13.8093 27.6175C17.5377 27.6175 20.6677 26.3901 22.9538 24.2727L18.5964 20.8972C17.4303 21.7104 15.8653 22.2781 13.8093 22.2781C10.1576 22.2781 7.05833 19.8693 5.95362 16.5398L1.48877 20.0073C3.75955 24.5182 8.40852 27.6175 13.8093 27.6175Z" fill="#34A853"/>
-									</svg></span>
-							</div>
-							<div class="review-card__stars" aria-label="5 stars"><svg width="108" height="24" viewBox="0 0 108 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M10 0L12.9389 5.95492L19.5106 6.90983L14.7553 11.5451L15.8779 18.0902L10 15L4.12215 18.0902L5.24472 11.5451L0.489435 6.90983L7.06107 5.95492L10 0Z" fill="#FFCE1B"/>
-								<path d="M32 0L34.9389 5.95492L41.5106 6.90983L36.7553 11.5451L37.8779 18.0902L32 15L26.1221 18.0902L27.2447 11.5451L22.4894 6.90983L29.0611 5.95492L32 0Z" fill="#FFCE1B"/>
-								<path d="M54 0L56.9389 5.95492L63.5106 6.90983L58.7553 11.5451L59.8779 18.0902L54 15L48.1221 18.0902L49.2447 11.5451L44.4894 6.90983L51.0611 5.95492L54 0Z" fill="#FFCE1B"/>
-								<path d="M76 0L78.9389 5.95492L85.5106 6.90983L80.7553 11.5451L81.8779 18.0902L76 15L70.1221 18.0902L71.2447 11.5451L66.4894 6.90983L73.0611 5.95492L76 0Z" fill="#FFCE1B"/>
-								<path d="M98 0L100.939 5.95492L107.511 6.90983L102.755 11.5451L103.878 18.0902L98 15L92.1221 18.0902L93.2447 11.5451L88.4894 6.90983L95.0611 5.95492L98 0Z" fill="#FFCE1B"/>
-							</svg></div>
-								<div class="review-card__text">
-							<p>
-								I want to give a huge thank you to the entire team! The move went smoothly, quickly, and completely stress-free. The crew arrived right on time, packed everything professionally, and handled all the furniture with great care. Not a single scratch or lost item! I was especially impressed by their polite attitude and willingness to help with anything. It’s clear they take pride in their work and know exactly what they’re doing. I would absolutely recommend this company to anyone looking for reliable and honest movers. Thanks again!							</p>
-								</div>
-						</div>
-						</div>
-						<div class="slide">
-							<div class="review-card">
-							<div class="review-card__top">
-								<div class="review-card__avatar"></div>
-								<div class="review-card__info">
-									<h3>Mary</h3>
-									<span>Google Review</span>
-								</div>
-								<span class="review-card__google"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.809 5.33941C16.402 5.33941 18.1511 6.45946 19.1484 7.39539L23.0456 3.59029C20.6521 1.36554 17.5374 0 13.809 0C8.40824 0 3.74393 3.09931 1.47314 7.6102L5.938 11.0777C7.05805 7.74828 10.1574 5.33941 13.809 5.33941Z" fill="#EA4335"/>
-											<path d="M27.066 14.115C27.066 12.9796 26.974 12.1511 26.7745 11.2918H13.8096V16.4164H21.4198C21.2663 17.6899 20.4378 19.6078 18.5966 20.8966L22.9541 24.2721C25.5624 21.8633 27.066 18.319 27.066 14.115Z" fill="#4285F4"/>
-											<path d="M5.95314 16.5402C5.66162 15.681 5.49284 14.7604 5.49284 13.8091C5.49284 12.8579 5.66162 11.9373 5.93779 11.0781L1.47294 7.6105C0.53701 9.48237 0 11.5844 0 13.8091C0 16.0339 0.53701 18.1359 1.47294 20.0078L5.95314 16.5402Z" fill="#FBBC05"/>
-											<path d="M13.8093 27.6175C17.5377 27.6175 20.6677 26.3901 22.9538 24.2727L18.5964 20.8972C17.4303 21.7104 15.8653 22.2781 13.8093 22.2781C10.1576 22.2781 7.05833 19.8693 5.95362 16.5398L1.48877 20.0073C3.75955 24.5182 8.40852 27.6175 13.8093 27.6175Z" fill="#34A853"/>
-									</svg></span>
-							</div>
-							<div class="review-card__stars" aria-label="5 stars"><svg width="108" height="24" viewBox="0 0 108 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M10 0L12.9389 5.95492L19.5106 6.90983L14.7553 11.5451L15.8779 18.0902L10 15L4.12215 18.0902L5.24472 11.5451L0.489435 6.90983L7.06107 5.95492L10 0Z" fill="#FFCE1B"/>
-								<path d="M32 0L34.9389 5.95492L41.5106 6.90983L36.7553 11.5451L37.8779 18.0902L32 15L26.1221 18.0902L27.2447 11.5451L22.4894 6.90983L29.0611 5.95492L32 0Z" fill="#FFCE1B"/>
-								<path d="M54 0L56.9389 5.95492L63.5106 6.90983L58.7553 11.5451L59.8779 18.0902L54 15L48.1221 18.0902L49.2447 11.5451L44.4894 6.90983L51.0611 5.95492L54 0Z" fill="#FFCE1B"/>
-								<path d="M76 0L78.9389 5.95492L85.5106 6.90983L80.7553 11.5451L81.8779 18.0902L76 15L70.1221 18.0902L71.2447 11.5451L66.4894 6.90983L73.0611 5.95492L76 0Z" fill="#FFCE1B"/>
-								<path d="M98 0L100.939 5.95492L107.511 6.90983L102.755 11.5451L103.878 18.0902L98 15L92.1221 18.0902L93.2447 11.5451L88.4894 6.90983L95.0611 5.95492L98 0Z" fill="#FFCE1B"/>
-							</svg></div>
-								<div class="review-card__text">
-							<p>
-								Careful movers and great communication. Everything arrived safely and the team was very respectful.
-
-							</p>
-								</div>
-						</div>
-						</div>
-						<div class="slide">
-							<div class="review-card">
-							<div class="review-card__top">
-								<div class="review-card__avatar"></div>
-								<div class="review-card__info">
-									<h3>Nathan</h3>
-									<span>Google Review</span>
-								</div>
-								<span class="review-card__google"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.809 5.33941C16.402 5.33941 18.1511 6.45946 19.1484 7.39539L23.0456 3.59029C20.6521 1.36554 17.5374 0 13.809 0C8.40824 0 3.74393 3.09931 1.47314 7.6102L5.938 11.0777C7.05805 7.74828 10.1574 5.33941 13.809 5.33941Z" fill="#EA4335"/>
-											<path d="M27.066 14.115C27.066 12.9796 26.974 12.1511 26.7745 11.2918H13.8096V16.4164H21.4198C21.2663 17.6899 20.4378 19.6078 18.5966 20.8966L22.9541 24.2721C25.5624 21.8633 27.066 18.319 27.066 14.115Z" fill="#4285F4"/>
-											<path d="M5.95314 16.5402C5.66162 15.681 5.49284 14.7604 5.49284 13.8091C5.49284 12.8579 5.66162 11.9373 5.93779 11.0781L1.47294 7.6105C0.53701 9.48237 0 11.5844 0 13.8091C0 16.0339 0.53701 18.1359 1.47294 20.0078L5.95314 16.5402Z" fill="#FBBC05"/>
-											<path d="M13.8093 27.6175C17.5377 27.6175 20.6677 26.3901 22.9538 24.2727L18.5964 20.8972C17.4303 21.7104 15.8653 22.2781 13.8093 22.2781C10.1576 22.2781 7.05833 19.8693 5.95362 16.5398L1.48877 20.0073C3.75955 24.5182 8.40852 27.6175 13.8093 27.6175Z" fill="#34A853"/>
-									</svg></span>
-							</div>
-							<div class="review-card__stars" aria-label="5 stars"><svg width="108" height="24" viewBox="0 0 108 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M10 0L12.9389 5.95492L19.5106 6.90983L14.7553 11.5451L15.8779 18.0902L10 15L4.12215 18.0902L5.24472 11.5451L0.489435 6.90983L7.06107 5.95492L10 0Z" fill="#FFCE1B"/>
-								<path d="M32 0L34.9389 5.95492L41.5106 6.90983L36.7553 11.5451L37.8779 18.0902L32 15L26.1221 18.0902L27.2447 11.5451L22.4894 6.90983L29.0611 5.95492L32 0Z" fill="#FFCE1B"/>
-								<path d="M54 0L56.9389 5.95492L63.5106 6.90983L58.7553 11.5451L59.8779 18.0902L54 15L48.1221 18.0902L49.2447 11.5451L44.4894 6.90983L51.0611 5.95492L54 0Z" fill="#FFCE1B"/>
-								<path d="M76 0L78.9389 5.95492L85.5106 6.90983L80.7553 11.5451L81.8779 18.0902L76 15L70.1221 18.0902L71.2447 11.5451L66.4894 6.90983L73.0611 5.95492L76 0Z" fill="#FFCE1B"/>
-								<path d="M98 0L100.939 5.95492L107.511 6.90983L102.755 11.5451L103.878 18.0902L98 15L92.1221 18.0902L93.2447 11.5451L88.4894 6.90983L95.0611 5.95492L98 0Z" fill="#FFCE1B"/>
-							</svg></div>
-								<div class="review-card__text">
-							<p>
-								These guys are absolutely amazing! They wasted no time, they brought a huge truck and did an amazing job on packing and moving! They made sure every furniture was moved safely! Super nice people! Great pricing and communication! Our best experience so far; I would definitely personally book them again and I would recommend them to anyone!							</p>
-								</div>
-						</div>
-						</div>
-						</div>
-					<div class="reviews-slider__info">
-						Read More Reviews on <a href="#">Google <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<g clip-path="url(#clip0_40001143_3962)">
-							<path d="M9.99902 -0.386719L12.938 5.5682L19.5096 6.52311L14.7543 11.1584L15.8769 17.7035L9.99902 14.6133L4.12117 17.7035L5.24374 11.1584L0.488459 6.52311L7.0601 5.5682L9.99902 -0.386719Z" fill="#FF6900"/>
-						</g>
-						<defs>
-							<clipPath id="clip0_40001143_3962">
-								<rect width="20" height="20" fill="white"/>
-							</clipPath>
-						</defs>
-					</svg>
-					</a>
-					</div>
-					<div class="reviews__controls" aria-label="Review slider controls">
-						<button class="slide-prev" type="button" aria-label="Previous review"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M12.6665 7.99973H3.33273M7.99962 3.33287L3.33273 7.99973L7.99962 12.6666" stroke="#151515" stroke-width="1.37249" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-						</button>
-						<button class="slide-next" type="button" aria-label="Next review"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M3.3335 7.99973H12.6673M8.00038 3.33287L12.6673 7.99973L8.00038 12.6666" stroke="#F9F9FA" stroke-width="1.37249" stroke-linecap="round" stroke-linejoin="round"/>
-						</svg>
-						</button>
-					</div>
-				</div>
-			</section>
-
-			<section class="pricing" id="pricing" aria-labelledby="pricing-title">
-				<div class="container ">
-					<div class="pricing-content">
-						<div class="section-label">Pricing</div>
-						<div class="section-title">
-							<h2>Honest Moving Pricing From The Beginning</h2>
-						</div>
-						<div class="section-text">
-							<p>
-								We keep moving pricing simple and honest. Tell us what you are moving, where you are going, and when you need help, and we will give you a clear quote before the job starts.
-							</p>
-							<p>
-								No confusing surprises. No hidden fees. Just reliable movers, careful protection, and straightforward communication.
-							</p>
-						</div>
-
-					</div>
-
-					<div class="pricing-card" aria-label="Moving price offer">
-						<div class="pricing-card__price">
-							<span>$149</span>
-							<strong>/hr</strong>
-						</div>
-						<div class="pricing-card__info"><span>4-hour minimum applies</span></div>
-						<div class="pricing-card__list">
-						<h3>What's Included:</h3>
+					<div class="title-section" data-aos="fade-up">Content for businesses that need to look premium online</div>
+					<div class="businesses-list">
 						<ul>
-							<li>Professionally trained movers arriving in a clean, fully equipped box truck</li>
-							<li>Careful furniture disassembly and secure reassembly</li>
-							<li>Full furniture protection using professional moving blankets and wrapping materials</li>
-							<li>Protective TV coverage for safe transportation</li>
-							<li>Mattress protection to keep items clean and damage-free during the move</li>
-							<li>TV dismounting available upon request</li>
-							<li>Organized, efficient moving process focused on protecting your home and belongings</li>
+							<li data-aos="fade-up"><button class="btn-light">Product Brands</button></li>
+							<li data-aos="fade-up"><button class="btn-light">Restaurants & Cafes</button></li>
+							<li data-aos="fade-up"><button class="btn-light">Real Estate Agencies</button></li>
+							<li data-aos="fade-up"><button class="btn-light">Local Businesses</button></li>
+							<li data-aos="fade-up"><button class="btn-light">Personal Brands</button></li>
+							<li data-aos="fade-up"><button class="btn-light">E-commerce Projects</button></li>
+							<li data-aos="fade-up"><button class="btn-light">Marketing Agencies</button></li>
 						</ul>
-
-						<a class="btn btn-dark" href="#" data-scroll="contact" >Get a Free Quote</a>
-						</div>
+					</div>
+					<div class="businesses-bottom" data-aos="fade-up">
+						<div class="businesses-bottom__title" data-aos="fade-right">Ready to create visuals for your brand?</div>
+						<button class="btn btn-primary" data-scroll="contact" data-aos="fade-left"><span>Get a Quote</span></button>
 					</div>
 				</div>
 			</section>
-
-			<section class="bottom-cta" aria-labelledby="bottom-cta-title">
+			<section class="marketing">
+				<div class="marketing-bg">
+					<img src="../static/images/marketing-bg.png" alt="marketing-bg">
+				</div>
 				<div class="container">
-					<div class="bottom-cta__wrap">
-						<div class="bottom-cta__desc">
-							<div class="section-title">Ready for a safer, smoother move?</div>
-							<div class="section-text">Free estimate · 700+ five-star reviews · Licensed & insured</div>
+					<div class="title-section" data-aos="fade-up">Visual content with marketing thinking behind it</div>
+					<div class="marketing-wrap">
+						<div class="marketing-item" data-aos-offset="400" data-aos="zoom-in"><span>[01]</span><div class="marketing-item__title">Certified in Videography</div></div>
+						<div class="marketing-item" data-aos-offset="400" data-aos="zoom-in"><span>[02]</span><div class="marketing-item__title">Commercial Photography & Video</div></div>
+						<div class="marketing-item" data-aos-offset="400" data-aos="zoom-in"><span>[03]</span><div class="marketing-item__title">AI Content Creation</div></div>
+						<div class="marketing-item" data-aos-offset="400" data-aos="zoom-in"><span>[04]</span><div class="marketing-item__title">Background in Journalism & Marketing</div></div>
+						<div class="marketing-item" data-aos-offset="400" data-aos="zoom-in"><span>[05]</span><div class="marketing-item__title">Product-focused visual direction</div></div>
+						<div class="marketing-item" data-aos-offset="400" data-aos="zoom-in"><span>[06]</span><div class="marketing-item__title">Content created for digital use</div></div>
+					</div>
+					<div class="marketing-media">
+						<img data-aos-offset="300" data-aos="zoom-in" src="../static/images/marketing-img.png" alt="marketing-img">
+					</div>
+				</div>
+			</section>
+			<section class="about" id="about">
+				<div class="container">
+					<div class="about-top">
+						<div class="about-top__img"><img  data-aos-offset="400" data-aos="zoom-in" src="../static/images/about-top-img-1.png" alt=""></div>
+						<div class="about-top__img"><img  data-aos-offset="400" data-aos="zoom-in" src="../static/images/about-top-img-2.png" alt=""></div>
+						<div class="about-top__img"><img  data-aos-offset="400" data-aos="zoom-in" src="../static/images/about-top-img-3.png" alt=""></div>
+					</div>
+					<div class="about-center">
+						<div class="title-section" data-aos="fade-up">Meet <br> Olena Butuk</div>
+						<div class="text-section" data-aos="fade-up">
+							Butuk Studio is a creative studio delivering product photography, videography, and visual content for brands.
 						</div>
-						<div class="bottom-cta__actions">
-							<a class="btn btn-dark" href="#" data-scroll="contact" >Get Your Quote</a>
-							<a class="btn btn-light" href="tel:7377777221" target="_blank">Call 737 777 7221</a>
+						<div class="text-section" data-aos="fade-up">
+							The founder of the studio has a background in marketing and have completed multiple professional courses in content creation and brand strategy.
 						</div>
 					</div>
-
+					<div class="about-bottom">
+						<div class="about-bottom__img"><img  data-aos-offset="400" data-aos="zoom-in" src="../static/images/about-bottom-img-1.png" alt=""></div>
+						<div class="about-bottom__img"><img  data-aos-offset="400" data-aos="zoom-in" src="../static/images/about-bottom-img-2.png" alt=""></div>
+						<div class="about-bottom__img"><img  data-aos-offset="400" data-aos="zoom-in" src="../static/images/about-bottom-img-3.png" alt=""></div>
+					</div>
 				</div>
 			</section>
 
-			<section class="contact" id="contact" aria-labelledby="contact-title">
+			<section class="work" id="work">
+				<div class="container">
+					<div class="title-section" data-aos="fade-up">Selected work</div>
+					<div class="work-filter" data-aos="fade-up">
+						<ul>
+							<li>
+								<button type="button" class="sort-btn is-active" data-filter="all"><span>All</span></button>
+							</li>
+
+							<li>
+								<button type="button" class="sort-btn" data-filter="photo">
+									<span>Photo</span>
+								</button>
+							</li>
+
+							<li>
+								<button type="button" class="sort-btn" data-filter="video">
+									<span>Video</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="sort-btn" data-filter="ai-creation">
+									<span>AI Creation</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="work-wrap" data-aos="fade-up">
+						<div class="work-inner _left" data-speed="42">
+							<div class="work-item" data-type="photo">
+								<img src="../static/images/work-1.png" alt="" draggable="false">
+							</div>
+							<div class="work-item" data-type="photo">
+								<img src="../static/images/work-2.png" alt="" draggable="false">
+							</div>
+							<div
+									class="work-item"
+									data-type="video"
+									data-video="../static/images/video/service-3.mp4"
+							>
+								<img src="../static/images/work-3.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="photo">
+								<img src="../static/images/work-4.png" alt="" draggable="false">
+							</div>
+
+							<div
+									class="work-item"
+									data-type="video"
+									data-video="../static/images/video/work-5.mp4"
+							>
+								<img src="../static/images/work-5.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="photo">
+								<img src="../static/images/work-6.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="ai-creation">
+								<img src="../static/images/work-7.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="photo">
+								<img src="../static/images/work-8.png" alt="" draggable="false">
+							</div>
+
+							<div
+									class="work-item"
+									data-type="video"
+									data-video="../static/images/video/work-9.mp4"
+							>
+								<img src="../static/images/work-9.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="ai-creation">
+								<img src="../static/images/work-10.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="photo">
+								<img src="../static/images/work-11.png" alt="" draggable="false">
+							</div>
+
+							<div
+									class="work-item"
+									data-type="video"
+									data-video="../static/images/video/work-12.mp4"
+							>
+								<img src="../static/images/work-12.png" alt="" draggable="false">
+							</div>
+
+						</div>
+
+
+						<div class="work-inner _right" data-speed="36">
+
+							<div
+									class="work-item"
+									data-type="video"
+									data-video="../static/images/video/work-1.mp4"
+							>
+								<img src="../static/images/work-1.png" alt="" draggable="false">
+							</div>
+
+							<div
+									class="work-item"
+									data-type="video"
+									data-video="../static/images/video/work-2.mp4"
+							>
+								<img src="../static/images/work-2.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="photo">
+								<img src="../static/images/work-3.png" alt="" draggable="false">
+							</div>
+
+							<div
+									class="work-item"
+									data-type="video"
+									data-video="../static/images/video/work-4.mp4"
+							>
+								<img src="../static/images/work-4.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="ai-creation">
+								<img src="../static/images/work-5.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="photo">
+								<img src="../static/images/work-6.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="ai-creation">
+								<img src="../static/images/work-7.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="ai-creation">
+								<img src="../static/images/work-8.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="photo">
+								<img src="../static/images/work-9.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="photo">
+								<img src="../static/images/work-10.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="ai-creation">
+								<img src="../static/images/work-11.png" alt="" draggable="false">
+							</div>
+
+							<div class="work-item" data-type="photo">
+								<img src="../static/images/work-12.png" alt="" draggable="false">
+							</div>
+
+						</div>
+
+					</div>
+			</section>
+			<section class="instagram">
+				<div class="instagram-circle" >
+					<svg class="instagram-circle__text" viewBox="0 0 620 620" aria-hidden="true">
+						<defs>
+							<path id="instagram-text-path" d="M310,310 m-260,0 a260,260 0 1,1 520,0 a260,260 0 1,1 -520,0"></path>
+						</defs>
+
+						<text>
+							<textPath href="#instagram-text-path" startOffset="0%">
+								AI CONTENT • BRAND VISUALS • PRODUCT PHOTOGRAPHY • VIDEO • AI CONTENT • BRAND VISUALS • PRODUCT PHOTOGRAPHY • VIDEO •
+							</textPath>
+						</text>
+					</svg>
+				</div>
+				<div class="container">
+					<div class="instagram-media _left" data-aos-offset="500" data-aos="zoom-out" data-video="../static/images/video/inst-1.mp4">
+						<div class="instagram-media__image">
+							<img src="../static/images/instagram-1.png" alt="">
+
+							<span class="instagram-media__caption _white" aria-hidden="true">
+								@butukstudio
+							</span>
+						</div>
+						<a href="#" class="instagram-media__caption _black" target="_blank">
+							@butukstudio
+						</a>
+					</div>
+					<div class="instagram-media _right" data-aos-offset="200" data-aos="zoom-out"  data-video="../static/images/video/inst-2.mp4">
+						<div class="instagram-media__image">
+							<img src="../static/images/instagram-2.png" alt="">
+						<span class="instagram-media__caption _white" aria-hidden="true">
+							6K+ Instagram audience
+							</span>
+					</div>
+					<span  class="instagram-media__caption _black" >
+						6K+ Instagram audience
+					</span>
+					</div>
+					<div class="instagram-water" data-aos="zoom-in">
+						<img src="../static/images/water.png" alt="">
+					</div>
+					<div class="instagram-bg" data-aos="zoom-in">
+						<img src="../static/images/instagram-bg.png" alt="">
+					</div>
+					<div class="instagram-wrap">
+						<div class="title-section" data-aos="fade-up">Follow the latest work</div>
+						<div class="instagram-main__image" data-aos-offset="300" data-aos="zoom-in">
+							<img src="../static/images/instagram-main.png" alt="">
+						</div>
+						<div class="text-section" data-aos="fade-up">Explore recent photo, video and AI content on Instagram.</div>
+						<a href="#" target="_blank" class="btn-inst" data-aos="fade-up">
+							<span>Instagram</span>
+							<span class="icon">
+								<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.49745 4.62558C6.80005 4.62558 4.62312 6.80255 4.62312 9.5C4.62312 12.1974 6.80005 14.3744 9.49745 14.3744C12.1948 14.3744 14.3718 12.1974 14.3718 9.5C14.3718 6.80255 12.1948 4.62558 9.49745 4.62558ZM9.49745 12.668C7.75305 12.668 6.32949 11.2444 6.32949 9.5C6.32949 7.75557 7.75305 6.33198 9.49745 6.33198C11.2418 6.33198 12.6654 7.75557 12.6654 9.5C12.6654 11.2444 11.2418 12.668 9.49745 12.668ZM14.5714 3.28993C13.9416 3.28993 13.433 3.79852 13.433 4.42832C13.433 5.05812 13.9416 5.56672 14.5714 5.56672C15.2012 5.56672 15.7098 5.0605 15.7098 4.42832C15.71 4.27877 15.6806 4.13066 15.6235 3.99246C15.5664 3.85426 15.4825 3.72869 15.3768 3.62294C15.271 3.51719 15.1455 3.43335 15.0073 3.3762C14.8691 3.31906 14.721 3.28974 14.5714 3.28993ZM18.9989 9.5C18.9989 8.18811 19.0108 6.88811 18.9371 5.5786C18.8635 4.05757 18.5165 2.70766 17.4043 1.59541C16.2897 0.480781 14.9421 0.136173 13.4211 0.0624986C12.1093 -0.0111762 10.8093 0.000706914 9.49982 0.000706914C8.18796 0.000706914 6.88798 -0.0111762 5.5785 0.0624986C4.0575 0.136173 2.70761 0.483158 1.59538 1.59541C0.480772 2.71004 0.136171 4.05757 0.0624975 5.5786C-0.0111759 6.89049 0.000706887 8.19049 0.000706887 9.5C0.000706887 10.8095 -0.0111759 12.1119 0.0624975 13.4214C0.136171 14.9424 0.483149 16.2923 1.59538 17.4046C2.70999 18.5192 4.0575 18.8638 5.5785 18.9375C6.89036 19.0112 8.19034 18.9993 9.49982 18.9993C10.8117 18.9993 12.1117 19.0112 13.4211 18.9375C14.9421 18.8638 16.292 18.5168 17.4043 17.4046C18.5189 16.29 18.8635 14.9424 18.9371 13.4214C19.0132 12.1119 18.9989 10.8119 18.9989 9.5ZM16.9076 15.104C16.7341 15.5366 16.5249 15.8598 16.1898 16.1925C15.8547 16.5276 15.5339 16.7368 15.1014 16.9103C13.8513 17.407 10.883 17.2953 9.49745 17.2953C8.11191 17.2953 5.14121 17.407 3.89114 16.9126C3.4586 16.7391 3.13539 16.53 2.80267 16.1949C2.46758 15.8598 2.25844 15.539 2.08495 15.1064C1.59063 13.8539 1.70232 10.8856 1.70232 9.5C1.70232 8.11444 1.59063 5.14368 2.08495 3.89359C2.25844 3.46104 2.46758 3.13783 2.80267 2.8051C3.13777 2.47238 3.4586 2.26086 3.89114 2.08737C5.14121 1.59303 8.11191 1.70473 9.49745 1.70473C10.883 1.70473 13.8537 1.59303 15.1038 2.08737C15.5363 2.26086 15.8595 2.47 16.1922 2.8051C16.5273 3.1402 16.7365 3.46104 16.9099 3.89359C17.4043 5.14368 17.2926 8.11444 17.2926 9.5C17.2926 10.8856 17.4043 13.8539 16.9076 15.104Z" fill="white"/>
+								</svg>
+							</span>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="contact" id="contact">
 				<div class="contact-bg">
-					<img src="../static/images/contact-bg.png" alt="Moving truck on road" />
+					<img src="../static/images/contact-bg.png" alt="contact-bg">
 				</div>
-
 				<div class="container">
-					<div class="contact-content">
-						<div class="contact-top">
-							<div class="section-title">
-								<h2>Contact Fat Pug Moving</h2>
+					<div class="contact-wrap">
+						<div class="contact-desc">
+							<div class="title-section" data-aos="fade-up">Let's talk</div>
+							<div class="text-section" data-aos="fade-up">Send a message with what you have in mind — a product, a space, a launch — and we'll get back to you within 24 hours.</div>
+							<div class="contact-info">
+								<ul>
+									<li data-aos="fade-up">
+										<span>Phone</span>
+										<a href="#" target="_blank">+1 (631) 576-5146</a>
+									</li>
+									<li data-aos="fade-up">
+										<span>Location</span>
+										<a href="#" target="_blank">Long Island, NY</a>
+									</li>
+									<li data-aos="fade-up">
+										<span>Email</span>
+										<a href="#" target="_blank">butukstudio@gmail.com</a>
+									</li>
+									<li data-aos="fade-up">
+										<span>Instagram</span>
+										<a href="#" target="_blank">@butukstudio</a>
+									</li>
+								</ul>
 							</div>
 						</div>
-						<div class="contact-bottom">
-							<ul>
-								<li>
-									<span>Working Hours</span>
-									<p>Monday–Sunday <br>8am–8pm</p>
-								</li>
-								<li>
-									<span>Phone</span>
-									<p><a href="tel:737-328-7003" target="_blank">737-328-7003</a></p>
-								</li>
-								<li>
-									<span>Email</span>
-									<p><a href="mailto:fatpug.moving@gmail.com">fatpug.moving@gmail.com</a></p>
-								</li>
-								<li>
-									<span>Address</span>
-									<a>8119 Exchange Dr, Austin, TX 78754<span>USDOT 4494365</span></a>
-								</li>
-							</ul>
+						<div class="contact-form">
+							<form>
+								<div class="modal-input" data-aos="fade-up">
+									<input type="text" placeholder="Name" name="Name">
+								</div>
+								<div class="modal-input" data-aos="fade-up">
+									<input type="email" placeholder="Email" name="Email">
+								</div>
+								<div class="modal-input" data-aos="fade-up">
+									<textarea placeholder="Message"></textarea>
+								</div>
+								<button data-aos="fade-up" type="submit" class="btn-white"><span>Send Message</span></button>
+							</form>
 						</div>
 					</div>
-
-					<div class="hero-form">
-						<div class="hero-form__title">Get Your Free Moving Quote</div>
-
-						<form class="" id="quote" action="#" method="post">
-							<div class="quote-form__grid">
-								<div class="modal-input">
-									<label>
-										<span>Your Name *</span>
-									</label>
-									<input type="text" name="name" placeholder="Your Name" required />
-
-								</div>
-								<div class="modal-input _half">
-									<label>
-										<span>Phone *</span>
-									</label>
-									<input type="tel" name="phone" placeholder="Phone" required />
-
-								</div>
-								<div class="modal-input _half">
-									<label>
-										<span>Email *</span>
-									</label>
-									<input type="email" name="email" placeholder="Email Address" required />
-
-								</div>
-
-								<div class="modal-input _half">
-									<label>
-										<span>Moving From </span>
-									</label>
-									<input type="text" name="moving_from" placeholder="Austin, TX"  />
-
-								</div>
-								<div class="modal-input _half">
-									<label>
-										<span>Moving To </span>
-									</label>
-									<input type="text" name="moving_to" placeholder="Dallas, TX"  />
-
-								</div>
-								<div class="modal-input _half">
-									<label>
-										<span>Preferred Move Date</span>
-									</label>
-									<input type="text" name="moving_date" placeholder="Moving Date" />
-
-								</div>
-								<div class="modal-input _half">
-									<label>
-										<span>Home Size / Move Size  </span>
-									</label>
-									<input type="text" name="moving_date" placeholder="Dallas, TX" />
-
-								</div>
-								<div class="modal-input">
-									<label>
-										<span>Additional Details</span>
-									</label>
-									<textarea name="message" placeholder="Any special requirements, large items, stairs, etc."></textarea>
-
-								</div>
-
+					<div class="contact-inner">
+						<div class="contact-inner__desc">
+							<div class="title-section" data-aos="fade-up">Contact us</div>
+							<div class="contact-social">
+								<ul>
+									<li data-aos="fade-up"><a href="#" target="_blank">Instagram</a></li>
+									<li data-aos="fade-up"><a href="#" target="_blank">+1 (631) 576-5146</a></li>
+								</ul>
 							</div>
-							<button class="btn btn-primary" type="submit">Request Your Quote</button>
-						</form>
-						<div class="quote-form__info">
-							By submitting this form, you agree to receive appointment reminders, notifications, and marketing updates via SMS to the phone number provided. Message and data rates may apply. You can opt out at any time by replying STOP.
-							<a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+							<div class="text-section" data-aos="fade-up">For any inquiries, please contact us at:</div>
+							<a href="#" target="_blank" class="contact-inner__mail" data-aos="fade-up">butukstudio@gmail.com</a>
 						</div>
+						<div class="contact-inner__info">
+							<div class="contact-inner__logo" data-aos="fade-up">
+								<img src="../static/images/logo-w.svg" alt="logo">
+							</div>
+							<div class="text-section" data-aos="fade-up">Commercial Photo, Video & AI Content</div>
+							<div class="contact-inner__link" data-aos="fade-up"><a href="#" target="_blank">@butukstudio</a></div>
+						</div>
+
 					</div>
 				</div>
 			</section>
-		</div>
+		</main>
 		<!--page-content-->
 		<footer class="footer">
-    <div class="container">
-        <div class="footer-top">
-            <div class="footer-info">
-                <ul>
-                    <li>
-                        <p>Phone:</p>
-                        <a href="#">
-                            737-328-7003</a>
-                    </li>
-                    <li>
-                        <p>Email:</p>
-                        <a href="#">
-
-                            fatpug.moving@gmail.com
-                        </a>
-                    </li>
-                    <li>
-                        <p>
-                            Address:</p>
-                        <a href="#">
-                            8119 Exchange Dr, Austin, TX 78754
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-nav">
-                <div class="footer-col">
-                    <div class="footer-col__title">Hours</div>
-                    <ul>
-                        <li>                        Monday–Sunday</li>
-                        <li>
-                            8am–8pm</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <div class="footer-col__title">Legal</div>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">USDOT 4494365</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-logo">
-                <a href="#"> <img src="../static/images/logo.png" alt="logo"></a>
-            </div>
-        </div>
-        <div class="footer-center">
-            <div class="section-text">
-                Austin's top-rated moving company providing professional, reliable moving services for local and long-distance moves.
-            </div>
-            <div class="footer-text">FAT PUG MOVING</div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="copy">© 2026 Fat Pug Moving. All rights reserved.</div>
-            <div class="created">Created by <a href="#">Mriya Marketing</a></div>
-
-        </div>
-    </div>
 </footer>
-
-
-
-
-
 	</div>
 	<!--end-page-wrapper-->
 	<script type="text/javascript" src="../static/js/lib.min.js"></script>
